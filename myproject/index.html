@@ -1,0 +1,22 @@
+{% extends 'theme.html' %}
+
+{% block content%}
+
+<h1>Churidar Store</h1>
+<div class="container">
+  <div class="row">
+    {% for Products in products %}
+    <div class="col-md-3">
+      <div class="card" style="...">
+        <img src="{{Products.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{Products.name}}</h5>
+          <p class="card-text">${{Products.price}}</p>
+          <a href="#" class="btn btn-primary">buy</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
